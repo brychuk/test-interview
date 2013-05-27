@@ -1,0 +1,64 @@
+Users:
+    type: entity
+    table: users
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        email:
+            type: string
+            length: 300
+            fixed: false
+            nullable: false
+        firstName:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: first_name
+        lastName:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: last_name
+        birthday:
+            type: date
+            nullable: false
+        shoeSize:
+            type: decimal
+            nullable: false
+            column: shoe_size
+        favIceCream:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_ice_cream
+        favSuperhero:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_superhero
+        favMoviestar:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_moviestar
+        worldEndDate:
+            type: date
+            nullable: false
+            column: world_end_date
+        superbowlWinner:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: superbowl_winner
+    lifecycleCallbacks: {  }

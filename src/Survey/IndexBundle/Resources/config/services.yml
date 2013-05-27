@@ -1,0 +1,4 @@
+services:
+    user_saver_service:
+        class: Survey\IndexBundle\Services\UserSaverService
+        arguments: [@doctrine.orm.entity_manager]

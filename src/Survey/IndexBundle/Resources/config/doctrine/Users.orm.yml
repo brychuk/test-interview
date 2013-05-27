@@ -1,0 +1,68 @@
+Survey\IndexBundle\Entity\Users:
+    type: entity
+    table: users
+    repositoryClass: Survey\IndexBundle\Entity\UsersRepository
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: true
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        email:
+            type: string
+            length: 300
+            fixed: false
+            nullable: false
+        firstName:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: first_name
+        lastName:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: last_name
+        birthday:
+            type: date
+            nullable: false
+        shoeSize:
+            type: decimal
+            precision: 4
+            scale: 1
+            nullable: false
+            column: shoe_size
+        favouriteIceCream:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_ice_cream
+        favouriteSuperhero:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_superhero
+        favouriteMovieStar:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: fav_moviestar
+        worldEndDate:
+            type: date
+            nullable: false
+            column: world_end_date
+        superbowlWinner:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: superbowl_winner
+
+    lifecycleCallbacks: { prePersist: [ prePersist ], preUpdate: [ preUpdate ] }

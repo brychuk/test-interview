@@ -1,0 +1,29 @@
+Survey\IndexBundle\Entity\Users:
+    properties:
+        id:
+            - NotBlank: { groups: [step2] }
+        email:
+            - NotBlank: { groups: [registration] }
+            - Email: { groups: [registration] }
+        firstName:
+            - NotBlank: { groups: [registration] }
+            - Length: { min: 2, groups: [registration] }
+        lastName:
+            - NotBlank: { groups: [registration] }
+            - Length: { min: 2, groups: [registration] }
+        birthday:
+            - NotBlank: { groups: [registration] }
+            - Date: { groups: [registration] }
+        shoeSize:
+            - NotBlank: { groups: [registration] }
+            - Range: { groups: [registration], min: 1.0, max: 999.0 }
+        favouriteIceCream:
+            - NotBlank: { groups: [step2] }
+        favouriteSuperhero:
+            - NotBlank: { groups: [step2] }
+        favouriteMovieStar:
+            - NotBlank: { groups: [step2] }
+        worldEndDate:
+            - Date:     { groups: [step2] }
+        superbowlWinner:
+            - NotBlank: { groups: [step2] }

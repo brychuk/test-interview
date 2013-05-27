@@ -1,0 +1,4 @@
+survey_index:
+    resource: "@SurveyIndexBundle/Resources/config/routing.yml"
+    prefix:   /
+

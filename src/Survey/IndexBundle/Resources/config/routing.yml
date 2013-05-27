@@ -1,0 +1,26 @@
+index:
+    path:     /
+    defaults: { _controller: SurveyIndexBundle:Default:index }
+    methods:  [GET]
+
+index_process:
+    path:     /
+    defaults: { _controller: SurveyIndexBundle:Default:indexPost }
+    methods:  [POST]
+
+step2:
+    path:     /step-2/
+    defaults: { _controller: SurveyIndexBundle:Default:step2 }
+    methods:  [GET]
+
+step2_with_id:
+    path:     /step-2/{id}/
+    defaults: { _controller: SurveyIndexBundle:Default:step2, id: 0 }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+
+step2_process:
+    path:     /step-2/
+    defaults: { _controller: SurveyIndexBundle:Default:step2Post }
+    methods:  [POST]
